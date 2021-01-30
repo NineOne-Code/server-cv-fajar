@@ -1,0 +1,50 @@
+  <!-- Modal -->
+  <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Perbarui Petani</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/petani?_method=PUT" method="POST" enctype="multipart/form-data">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="nama">Nama</label>
+              <input type="text" class="form-control nama" name="nama" placeholder="Masukan Nama" required>
+            </div>
+            <div class="form-group">
+              <label for="nama">Nomor Telepon</label>
+              <input type="text" class="form-control telp" name="telp" placeholder="Masukan Nomor Telepon" required>
+            </div>
+            <div class="form-group">
+              <label for="nama">Alamat</label>
+              <input type="text" class="form-control alamat" name="alamat" placeholder="Masukan Alamat" required>
+            </div>
+            <div class="form-group">
+              <label for="image">Berkas-Berkas</label>
+              <input type="file" class="form-control image" name="image" multiple>
+            </div>
+            <div class="form-group">
+              <label for="nama">Kelompok Tani</label>
+              <input type="text" class="form-control kelompok_tani" name="kelompok_tani" placeholder="Masukan Kelompok Tani" required>
+            </div>
+            <div class="form-group">
+              <label for="nama">Pengelola Irigasi</label>
+              <input type="text" class="form-control pengelola_irigasi" name="pengelola_irigasi" placeholder="Masukan Pengelola Irigasi" required>
+            </div>
+            <div class="form-group">
+              <label for="nama">Luas Tanah</label>
+              <input type="text" class="form-control luas_tanah" name="luas_tanah" placeholder="Masukan Alamat" required>
+            </div>
+        </div>
+            <div class="modal-footer">
+              <input type="hidden" class="id" name="id">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Perbarui</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

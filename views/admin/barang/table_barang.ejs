@@ -1,0 +1,49 @@
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">
+            <i class="fas fa-plus"></i>
+          </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Kategori</th>
+                        <th>Harga Jual</th>
+                        <th>Stok</th>
+                        <th>Gambar</th>
+                        <th>Tanggal Buat</th>
+                        <th>Tanggal Ubah</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < results.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= results[i].nama %></td>
+                            <td><%= results[i].kate %></td>
+                            <td><%= results[i].harga_jual %></td>
+                            <td><%= results[i].stok %></td>
+                            <td>
+                                <img src="http://localhost:3000/<%= results[i].image %>" alt="<%= results[i].nama %>" style="border-radius: 15px;" height="180px" width="263px">
+                            </td>
+                            <td><%= results[i].tgl_buat %></td>
+                            <td><%= results[i].tgl_ubah %></td>
+                            <td>
+                                <form action="/admin/barang/<%= results[i].barang_id %>?_method=DELETE" method="POST">
+                                    <a href="javascript:void()" type="button" class="btn btn-warning btn-circle btn-sm button-update" data-id="<%= results[i].barang_id %>" data-nama="<%= results[i].nama %>" data-option:selected="<%= results[i].kate %>" data-harga_jual="<%= results[i].harga_jual %>" data-stok="<%= results[i].stok %>"><i class="fas fa-edit"></i></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

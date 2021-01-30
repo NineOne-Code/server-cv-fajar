@@ -1,0 +1,51 @@
+  <!-- Modal -->
+  <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Perbarui Barang</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/barang?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+                <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control nama" name="nama" placeholder="Masukan Nama" required>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="kate">Kategori</label>
+                  </div>
+                  <select name="kate" class="custom-select kate" id="kate">
+                    <% for(let i = 0; i < unique.length; i++) { %>
+                        <option class="<%= unique[i] %>" value="<%= i+1 %>"><%= unique[i] %></option>
+                    <% } %>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="harga_jual">Harga Jual</label>
+                  <input type="text" class="form-control harga_jual" name="harga_jual" placeholder="Masukan Harga Jual" required>
+                </div>
+                <div class="form-group">
+                  <label for="stok">Stok</label>
+                  <input type="text" class="form-control stok" name="stok" placeholder="Enter Stok" required>
+                </div>
+                <div class="form-group">
+                  <label for="image">Image</label>
+                  <input type="file" class="form-control image" name="image">
+                  <span>Pilih gambar untuk memperbarui. <span class="text-danger">NB: Gambar Harus Landscape</span></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" class="id" name="id">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Perbarui</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>
