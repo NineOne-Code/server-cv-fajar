@@ -1,0 +1,43 @@
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">
+            <i class="fas fa-plus"></i>
+          </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Admin</th>
+                        <th>Nama Petani</th>
+                        <th>Total Harga</th>
+                        <th>Tanggal Buat</th>
+                        <th>Tanggal Ubah</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < results.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= results[i].nama_admin %></td>
+                            <td><%= results[i].nama_petani %></td>
+                            <td><%= results[i].total_harga %></td>
+                            <td><%= results[i].tgl_buat %></td>
+                            <td><%= results[i].tgl_ubah %></td>
+                            <td>
+                                <form action="/admin/penjualan/<%= results[i].penjualan_id %>?_method=DELETE" method="POST">
+                                    <a href="javascript:void()" type="button" class="btn btn-warning btn-circle btn-sm button-update" data-id="<%= results[i].penjualan_id %>" data-nama_admin="results[i].nama_admin" data-nama_petani="<%= results[i].nama_petani %>" data-total_harga="<%= results[i].total_harga %>"><i class="fas fa-edit"></i></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

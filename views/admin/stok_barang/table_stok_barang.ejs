@@ -1,0 +1,45 @@
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">
+            <i class="fas fa-plus"></i>
+          </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Barang</th>
+                        <th>Jumlah</th>
+                        <th>Harga Beli</th>
+                        <th>Kadaluwarsa</th>
+                        <th>Tanggal Buat</th>
+                        <th>Tanggal Ubah</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < stok_barang.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= stok_barang[i].barangId %></td>
+                            <td><%= stok_barang[i].jumlah %></td>
+                            <td><%= stok_barang[i].harga_beli %></td>
+                            <td><%= stok_barang[i].kadaluwarsa %></td>
+                            <td><%= stok_barang[i].tgl_buat %></td>
+                            <td><%= stok_barang[i].tgl_ubah %></td>
+                            <td>
+                                <form action="/admin/stok_barang/<%= stok_barang[i].id %>?_method=DELETE" method="POST">
+                                    <a href="javascript:void()" type="button" class="btn btn-warning btn-circle btn-sm button-update" data-id="<%= stok_barang[i].id %>" data-option:selected="<%= stok_barang[i].barangId %>" data-jumlah="<%= stok_barang[i].jumlah %>" data-harga_beli="<%= stok_barang[i].harga_beli %>" data-kadaluwarsa="<%= stok_barang[i].kadaluwarsa %>"><i class="fas fa-edit"></i></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

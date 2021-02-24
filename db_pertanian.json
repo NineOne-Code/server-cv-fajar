@@ -1,0 +1,214 @@
+{
+  "admin": [
+    {
+      "id": "1",
+      "nama": "Ridho",
+      "username": "wyvren",
+      "password": "12345",
+      "tgl_buat": "2021-01-22 17:37:47",
+      "tgl_ubah": "2021-01-22 10:38:48"
+    },
+    {
+      "nama": "Anata",
+      "username": "Dou",
+      "password": "12345",
+      "tgl_buat": "2021-02-22",
+      "tgl_ubah": "2021-02-22",
+      "id": "gUQ2t1H"
+    },
+    {
+      "nama": "Bahar",
+      "username": "Dou",
+      "password": "12345",
+      "tgl_buat": "new Date().toISOString()",
+      "tgl_ubah": "new Date().toISOString()",
+      "id": "aFgumo1"
+    }
+  ],
+  "barang": [
+    {
+      "id": "1",
+      "nama": "Dupont Ally Plus",
+      "kategoriId": "Obat-obatan",
+      "harga_jual": "12",
+      "stok": "20",
+      "image": "",
+      "tgl_buat": "2021-01-21 19:42:19",
+      "tgl_ubah": "2021-01-21 19:43:10"
+    },
+    {
+      "id": "2",
+      "nama": "Bablas (1lt)",
+      "kategoriId": "Obat-obatan",
+      "harga_jual": "60",
+      "stok": "5",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:14:17",
+      "tgl_ubah": "2021-01-22 17:21:49"
+    },
+    {
+      "id": "3",
+      "nama": "Calaris (500ml)",
+      "kategoriId": "Obat-obatan",
+      "harga_jual": "165",
+      "stok": "5",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:14:17",
+      "tgl_ubah": "2021-01-22 17:21:49"
+    },
+    {
+      "id": "4",
+      "nama": "Pertiwi-3 (1kg)",
+      "kategoriId": "Benih / Bibit",
+      "harga_jual": "43",
+      "stok": "5",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:22:57",
+      "tgl_ubah": "2021-01-22 17:24:13"
+    },
+    {
+      "id": "5",
+      "nama": "Bisi-18 (1kg)",
+      "kategoriId": "Benih / Bibit",
+      "harga_jual": "70",
+      "stok": "5",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:27:16",
+      "tgl_ubah": "2021-01-22 17:28:06"
+    },
+    {
+      "id": "6",
+      "nama": "Sri Sendono (64-SS)",
+      "kategoriId": "Benih / Bibit",
+      "harga_jual": "95",
+      "stok": "5",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:28:09",
+      "tgl_ubah": "2021-01-22 17:29:19"
+    },
+    {
+      "id": "7",
+      "nama": "Petroganik (20kg)",
+      "kategoriId": "Pupuk",
+      "harga_jual": "30",
+      "stok": "10",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:30:26",
+      "tgl_ubah": "2021-01-22 17:32:48"
+    },
+    {
+      "id": "8",
+      "nama": "Phonska (Subsidi [50kg])",
+      "kategoriId": "Pupuk",
+      "harga_jual": "115",
+      "stok": "50",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:30:26",
+      "tgl_ubah": "2021-01-22 17:32:48"
+    },
+    {
+      "id": "9",
+      "nama": "ZA (Subsidi [50kg])",
+      "kategoriId": "Pupuk",
+      "harga_jual": "70",
+      "stok": "50",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:34:27",
+      "tgl_ubah": "2021-01-22 17:36:36"
+    },
+    {
+      "id": "10",
+      "nama": "NPK Pelangi (non-subsidi)",
+      "kategoriId": "Pupuk",
+      "harga_jual": "140",
+      "stok": "5",
+      "image": "",
+      "tgl_buat": "2021-01-22 17:34:27",
+      "tgl_ubah": "2021-01-22 17:36:36"
+    }
+  ],
+  "customer": [
+    {
+      "id": "1",
+      "nama": "Mistom",
+      "telp": "089190199223",
+      "alamat": "Desa Karang Kenik, Kec. Olean Kab. Situbondo",
+      "kartu_keluarga": "images/1611849316889.jpg",
+      "ktp": "images/1611849316887.jpg",
+      "kelompok_tani": "Makmur 1",
+      "pengelola_irigasi": "Subahri",
+      "luas_tanah": "4 hektar",
+      "tgl_buat": "2021-01-22 17:39:00",
+      "tgl_ubah": "2021-01-28 22:57:31"
+    },
+    {
+      "id": "13",
+      "nama": "Ragnala",
+      "telp": "214453",
+      "alamat": "Kamal",
+      "kartu_keluarga": "images/1612014219349.jpg",
+      "ktp": "images/1612014219344.jpg",
+      "kelompok_tani": "isnackn",
+      "pengelola_irigasi": "cnjncsjdn",
+      "luas_tanah": "mckdscmds",
+      "tgl_buat": "2021-01-30 20:43:39",
+      "tgl_ubah": "2021-01-30 20:43:39"
+    }
+  ],
+  "detail_penjualan": [
+    {
+      "id": "1",
+      "barangId": "Dupont Ally Plus",
+      "penjualanId": "10",
+      "jumlah": "100",
+      "total_harga": "2000000"
+    }
+  ],
+  "kategori": [
+    {
+      "id": "1",
+      "nama": "Obat-obatan",
+      "tgl_buat": "2021-01-21 19:30:17",
+      "tgl_ubah": "2021-01-21 19:40:52"
+    },
+    {
+      "id": "2",
+      "nama": "Pupuk",
+      "tgl_buat": "2021-01-21 19:41:06",
+      "tgl_ubah": "2021-01-21 19:41:38"
+    },
+    {
+      "id": "3",
+      "nama": "Benih / Bibit",
+      "tgl_buat": "2021-01-21 20:00:03",
+      "tgl_ubah": "2021-01-21 20:01:40"
+    },
+    {
+      "id": "4",
+      "nama": "Peralatan Pertanian",
+      "tgl_buat": "2021-01-21 20:00:03",
+      "tgl_ubah": "2021-01-21 20:01:40"
+    }
+  ],
+  "penjualan": [
+    {
+      "id": "10",
+      "adminId": "Ridho",
+      "customerId": "Mistom",
+      "total_harga": "2000000",
+      "tgl_buat": "2021-01-27 20:03:08",
+      "tgl_ubah": "2021-01-27 20:17:11"
+    }
+  ],
+  "stok_barang": [
+    {
+      "id": "1",
+      "barangId": "Pertiwi-3 (1kg)",
+      "jumlah": "1000",
+      "harga_beli": "100000",
+      "kadaluwarsa": "2021-03-25",
+      "tgl_buat": "2021-01-27",
+      "tgl_ubah": "2021-01-27 20:25:23"
+    }
+  ]
+}

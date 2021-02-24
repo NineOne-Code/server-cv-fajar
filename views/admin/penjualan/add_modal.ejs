@@ -1,0 +1,50 @@
+  <!-- Modal -->
+  <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tambah Penjualan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/penjualan" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Nama Admin</label>
+                  </div>
+                  <select name="adminId" class="custom-select" id="inputGroupSelect01">
+                    <option selected>Pilih...</option>
+                    <% for(let i = 0; i < admin.length; i++) { %>
+                      <option value="<%= admin[i].id %>"><%= admin[i].nama %></option>
+                    <% } %>
+                  </select>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Nama Petani</label>
+                  </div>
+                  <select name="customerId" class="custom-select" id="inputGroupSelect01">
+                    <option selected>Pilih...</option>
+                    <% for(let i = 0; i < petani.length; i++) { %>
+                      <option value="<%= petani[i].id %>"><%= petani[i].nama %></option>
+                    <% } %>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="nama">Total Harga</label>
+                  <input type="text" class="form-control" name="total_harga" placeholder="Masukan Total Harga" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

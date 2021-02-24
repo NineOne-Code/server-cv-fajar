@@ -1,0 +1,54 @@
+  <!-- Modal -->
+  <div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Perbarui Detail Penjualan</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/detail_penjualan?_method=PUT" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Nama Barang</label>
+                  </div>
+                  <select name="barangId" id="barangId" class="custom-select" id="inputGroupSelect01">
+                    <% for(let i = 0; i < barang.length; i++) { %>
+                      <option value="<%= barang[i].id %>"><%= barang[i].nama %></option>
+                    <% } %>
+                  </select>
+                </div>
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">ID Penjualan</label>
+                  </div>
+                  <select name="penjualanId"  id="penjualanId" class="custom-select" id="inputGroupSelect01">
+                    <% for(let i = 0; i < penjualan.length; i++) { %>
+                      <option value="<%= penjualan[i].id %>"><%= penjualan[i].id %></option>
+                    <% } %>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="nama">Jumlah</label>
+                  <input type="text" class="form-control jumlah" name="jumlah" placeholder="Masukan Jumlah Barang" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Total Harga</label>
+                  <input type="text" class="form-control total_harga" name="total_harga" placeholder="Masukan Total Harga" required>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+              <input type="hidden" class="id" name="id">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary">Perbarui</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

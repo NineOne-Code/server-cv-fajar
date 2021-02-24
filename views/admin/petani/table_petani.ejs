@@ -1,0 +1,57 @@
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">
+            <i class="fas fa-plus"></i>
+          </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nomor Telepon</th>
+                        <th>Alamat</th>
+                        <th>Kartu Keluarga</th>
+                        <th>KTP</th>
+                        <th>Kelompok Tani</th>
+                        <th>Pengelola Irigasi</th>
+                        <th>Luas Tanah</th>
+                        <th>Tanggal Buat</th>
+                        <th>Tanggal Ubah</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < petani.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= petani[i].nama %></td>
+                            <td><%= petani[i].telp %></td>
+                            <td><%= petani[i].alamat %></td>
+                            <td>
+                                <img src="http://localhost:3000/<%= petani[i].kartu_keluarga %>" alt="KK <%= petani[i].nama %>" style="border-radius: 15px;"  width="150px">
+                            </td>
+                            <td>
+                                <img src="http://localhost:3000/<%= petani[i].ktp %>" alt="KTP <%= petani[i].nama %>" style="border-radius: 15px;" width="150px">
+                            </td>
+                            <td><%= petani[i].kelompok_tani %></td>
+                            <td><%= petani[i].pengelola_irigasi %></td>
+                            <td><%= petani[i].luas_tanah %></td>
+                            <td><%= petani[i].tgl_buat %></td>
+                            <td><%= petani[i].tgl_ubah %></td>
+                            <td>
+                                <form action="/admin/petani/<%= petani[i].id %>?_method=DELETE" method="POST">
+                                    <a href="javascript:void()" type="button" class="btn btn-warning btn-circle btn-sm button-update" data-id="<%= petani[i].id %>" data-nama="<%= petani[i].nama %>" data-telp="<%= petani[i].telp %>" data-alamat="<%= petani[i].alamat %>" data-kelompok_tani="<%= petani[i].kelompok_tani %>" data-pengelola_irigasi="<%= petani[i].pengelola_irigasi %>" data-luas_tanah="<%= petani[i].luas_tanah%>"><i class="fas fa-edit"></i></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

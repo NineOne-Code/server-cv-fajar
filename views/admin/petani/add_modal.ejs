@@ -1,0 +1,49 @@
+  <!-- Modal -->
+  <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tambah Petani</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/petani" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+                <div class="form-group">
+                  <label for="nama">Nama</label>
+                  <input type="text" class="form-control" name="nama" placeholder="Masukan Nama" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Nomor Telepon</label>
+                  <input type="text" class="form-control" name="telp" placeholder="Masukan Nomor Telepon" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Alamat</label>
+                  <input type="text" class="form-control" name="alamat" placeholder="Masukan Alamat" required>
+                </div>
+                <div class="form-group">
+                  <label for="image">Berkas-Berkas</label>
+                  <input type="file" class="form-control" name="image" multiple required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Kelompok Tani</label>
+                  <input type="text" class="form-control" name="kelompok_tani" placeholder="Masukan Kelompok Tani" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Pengelola Irigasi</label>
+                  <input type="text" class="form-control" name="pengelola_irigasi" placeholder="Masukan Pengelola Irigasi" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Luas Tanah</label>
+                  <input type="text" class="form-control" name="luas_tanah" placeholder="Masukan Alamat" required>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

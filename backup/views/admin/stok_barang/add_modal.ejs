@@ -1,0 +1,47 @@
+  <!-- Modal -->
+  <div class="modal fade" id="add-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Tambah Stok Barang</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="/admin/stok_barang" method="POST" enctype="multipart/form-data">
+        <div class="modal-body">
+
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Nama Barang</label>
+                  </div>
+                  <select name="nama_barang" class="custom-select" id="inputGroupSelect01">
+                    <option selected>Pilih...</option>
+                    <% for(let i = 0; i < unique.length; i++) { %>
+                      <option value="<%= i+1 %>"><%= unique[i] %></option>
+                    <% } %>
+                  </select>
+                </div>
+                
+                <div class="form-group">
+                  <label for="nama">Jumlah</label>
+                  <input type="text" class="form-control" name="jumlah" placeholder="Masukan Jumlah Harga" required>
+                </div>
+                <div class="form-group">
+                  <label for="nama">Harga Beli</label>
+                  <input type="text" class="form-control" name="harga_beli" placeholder="Masukan Harga Beli" required>
+                </div>
+                <div class="form-group">
+                  <label for="image">Kadaluwarsa</label>
+                  <input type="text" class="form-control" name="kadaluwarsa" id="inputKadaluwarsa" placeholder="" required>
+                  <span>Format: <span class="text-danger">yyyy-mm-dd</span></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary">Tambah</button>
+            </div>
+        </form>
+      </div>
+    </div>
+  </div>

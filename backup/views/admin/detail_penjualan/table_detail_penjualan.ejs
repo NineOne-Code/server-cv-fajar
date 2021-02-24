@@ -1,0 +1,41 @@
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-modal">
+            <i class="fas fa-plus"></i>
+          </button>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Barang</th>
+                        <th>ID Penjualan</th>
+                        <th>Jumlah</th>
+                        <th>Total Harga</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(let i = 0; i < results.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= results[i].nama_barang %></td>
+                            <td><%= results[i].penjualan_id %></td>
+                            <td><%= results[i].jumlah %></td>
+                            <td><%= results[i].total_harga %></td>
+                            <td>
+                                <form action="/admin/detail_penjualan/<%= results[i].detail_penjualan_id %>?_method=DELETE" method="POST">
+                                    <a href="javascript:void()" type="button" class="btn btn-warning btn-circle btn-sm button-update" data-id="<%= results[i].detail_penjualan %>" data-nama_barang="<%= results[i].nama_barang %>" data-penjualan_id="<%= results[i].penjualan_id %>" data-jumlah="<%= results[i].jumlah %>" data-total_harga="<%= results[i].total_harga %>"><i class="fas fa-edit"></i></a>
+                                    <button type="submit" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
